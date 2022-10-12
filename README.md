@@ -24,4 +24,6 @@ Slide "Reason" to Lines (Lignes) under Name,
 Slide "Loss" to Values (Valeurs),
 and you will have the completed Pivot Table.
 
+Finally, right click on "No", go to "move" (deplacer) and put it at the bottom. Similarly, put "Yes" at the top.
+
 Save, and send this document to whoever it concerns.
