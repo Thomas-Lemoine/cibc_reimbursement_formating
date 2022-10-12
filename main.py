@@ -1,8 +1,7 @@
 
-from re import U
 import pandas as pd
 
-from settings import *
+from settings import CSV_INPUT_FILENAME, PARSED_CSV_FILENAME
 from functions import prepare_csv, ask_user_yesnomaybe
 
 def main():
@@ -18,7 +17,5 @@ def main():
     ask_user_yesnomaybe(df)
 
 if __name__ == "__main__":
-    pd.set_option('display.max_columns', None)
-    pd.set_option('display.max_rows', None)
     main()
     
