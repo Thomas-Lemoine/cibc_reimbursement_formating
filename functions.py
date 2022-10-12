@@ -1,9 +1,8 @@
-
 import pandas as pd
 import re
 from datetime import datetime
 
-from settings import REF_DATE, XLSX_RESULTS_FILENAME, CSV_RESULTS_FILENAME
+from settings import REF_DATE, XLSX_RESULTS_FILENAME
 
 
 def datestr_to_dateobj_in_row(row):
@@ -88,37 +87,3 @@ def ask_user_yesnomaybe(df: pd.DataFrame):
     df["Answer"] = answers_lst
     df["Reason"] = reasons_lst
     df.to_excel(XLSX_RESULTS_FILENAME)
-    df.to_csv(CSV_RESULTS_FILENAME)
-
-    
-        
-    
-    
-
-"""def ask_user_yesnomaybe(df):
-    total_yes, total_maybe, total_no = 0,0,0
-    yes_str, no_str, maybe_str="","",""
-    with open(RESULTS_FILENAME, "w") as output_file:
-        for _, row in df.iterrows():
-            ans = input(f"Is a refund needed for {row['Date']}, {row['Name']}, {row['Loss']:.2f}?\n")
-            info_str = f"{row['Date']}\t{row['Name']}\t{row['Loss']}\n"
-
-            if ans[0] == "y":
-                print("Added to Yes")
-                total_yes += row["Loss"]
-                yes_str +=   f"Yes   : {info_str}"
-            elif ans[0] == "n":
-                print("Added to No")
-                total_no += row["Loss"]
-                no_str +=    f"No    : {info_str}"
-            else:
-                print("Added to Maybe")
-                total_maybe += row["Loss"]
-                maybe_str += f"Maybe : {info_str}"
-
-        output_file.write(f"YES : \nTOTAL of YES: {total_yes}\n{yes_str}\n\n")
-        output_file.write(f"MAYBE : \nTOTAL of MAYBE: {total_maybe}\n{maybe_str}\n\n")
-        output_file.write(f"NO : \nTOTAL of NO: {total_no}\n{no_str}\n\n")
-    print(f"{total_yes   =}")
-    print(f"{total_maybe =}")
-    print(f"{total_no    =}")"""
