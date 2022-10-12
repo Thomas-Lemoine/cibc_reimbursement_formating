@@ -20,8 +20,8 @@ For the pivot table, go in Insertion > Pivot Table (tableau croisé dynamique in
 
 Slide "Answer" to Lines (Lignes),
 Slide "Name" to Lines (Lignes) under Answer,
+Slide "Reason" to Lines (Lignes) under Name,
 Slide "Loss" to Values (Valeurs),
-Slide "Reason" to Filters (Filtres),
 and you will have the completed Pivot Table.
 
 Save, and send this document to whoever it concerns.
